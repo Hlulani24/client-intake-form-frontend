@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ── Main wrapper ── */
+.form-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* ── Header ── */
+.form-header {
+  background-color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 3px solid #e60000;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-address {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.header-address a {
+  color: #e60000;
+  text-decoration: none;
+}
+
+.header-address a:hover {
+  text-decoration: underline;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 240px;
+}
+
+.header-right h2 {
+  color: #e60000;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: none;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.header-right .form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.header-right label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  min-width: 110px;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.header-right input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  font-size: 13px;
+  padding: 3px 4px;
+  width: 120px;
+  background: transparent;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.header-right input:focus {
+  outline: none;
+  border-bottom-color: #e60000;
+}
+
+/* ── Sections ── */
+.form-section {
+  border-bottom: 2px solid #f0f0f0;
+  padding: 20px 30px;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h2 {
+  background-color: #e60000;
+  color: white;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  border-radius: 2px;
+}
+
+/* ── Field rows ── */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+/* ── Individual field ── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.form-field input[type="text"],
+.form-field input[type="date"],
+.form-field select {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="date"]:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #e60000;
+  background: #fff;
+}
+
+/* ── Placeholder styling ── */
+.form-field input::placeholder {
+  color: #bbb;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ── Input size variants ── */
+.field-xs {
+  flex: none;
+  width: 80px;
+  min-width: 80px;
+}
+
+.field-sm {
+  flex: none;
+  width: 150px;
+  min-width: 150px;
+}
+
+.field-md {
+  flex: none;
+  width: 210px;
+  min-width: 180px;
+}
+
+.field-lg {
+  flex: 1;
+  min-width: 220px;
+}
+
+.field-full {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* ── Radio groups ── */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.radio-group span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #444;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 0;
+}
+
+.radio-group label:hover {
+  background: #fdecea;
+  border-color: #e60000;
+  color: #e60000;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #e60000;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* ── Legal text blocks ── */
+.legal-text {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.8;
+  background: #fafafa;
+  border-left: 3px solid #e60000;
+  padding: 14px 18px;
+  margin-top: 14px;
+  border-radius: 0 3px 3px 0;
+}
+
+.legal-text input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  font-size: 12px;
+  width: 130px;
+  padding: 2px 4px;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.legal-text input[type="text"]:focus {
+  outline: none;
+  border-bottom-color: #e60000;
+}
+
+.legal-text a {
+  color: #e60000;
+  text-decoration: none;
+}
+
+.legal-text a:hover {
+  text-decoration: underline;
+}
+
+/* ── Submit button ── */
+.form-submit {
+  padding: 24px 30px;
+  text-align: right;
+  background: #fafafa;
+  border-top: 2px solid #f0f0f0;
+}
+
+.form-submit button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.form-submit button:hover {
+  background-color: #cc0000;
+}
+
+.form-submit button:active {
+  transform: scale(0.98);
+}
+
+/* ── Print styles ── */
+@media print {
+  body { background: white; }
+  .form-wrapper {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    max-width: 100%;
+  }
+  .form-submit { display: none; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .form-header { flex-direction: column; }
+  .form-field { min-width: 100%; }
+  .header-right { min-width: 100%; }
+  .field-xs, .field-sm, .field-md, .field-lg {
+    width: 100%;
+    min-width: 100%;
+  }
+}
