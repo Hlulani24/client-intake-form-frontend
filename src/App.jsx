@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import logo from './assets/Logo.png';
 import CustomerDetails from './components/CustomerDetails';
 import RelativeDetails from './components/RelativeDetails';
 import EmploymentDetails from './components/EmploymentDetails';
@@ -83,7 +82,6 @@ function App() {
 
       <div className="form-header">
         <div className="header-left">
-          <img src={logo} width="140" height="auto" alt="Vodacom Logo" />
           <div className="header-address">
             Vodacom Corporate Park, 082 Vodacom Boulevard<br />
             Midrand, 1685 South Africa<br />
