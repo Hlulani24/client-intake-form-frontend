@@ -28,7 +28,7 @@ function Dashboard({ onBack }) {
       <div className="form-header">
         <div className="header-left">
           <h1 style={{ color: '#e60000', fontSize: '22px', fontWeight: '700' }}>
-            Vodacom Applications Dashboard
+            Dashboard
           </h1>
           <p style={{ color: '#555', fontSize: '13px' }}>
             All submitted applications
@@ -67,36 +67,38 @@ function Dashboard({ onBack }) {
         )}
 
         {!loading && !error && applications.length > 0 && (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
-            <thead>
-              <tr style={{ backgroundColor: '#e60000', color: 'white' }}>
-                <th style={th}>ID</th>
-                <th style={th}>Name</th>
-                <th style={th}>Surname</th>
-                <th style={th}>Email</th>
-                <th style={th}>Tel</th>
-                <th style={th}>Company</th>
-                <th style={th}>Submitted</th>
-              </tr>
-            </thead>
-            <tbody>
-              {applications.map((app, index) => (
-                <tr
-                  key={app.id}
-                  style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f9f9f9' }}>
-                  <td style={td}>{app.id}</td>
-                  <td style={td}>{app.title} {app.first_name}</td>
-                  <td style={td}>{app.surname}</td>
-                  <td style={td}>{app.email || '—'}</td>
-                  <td style={td}>{app.home_tel || '—'}</td>
-                  <td style={td}>{app.company_name || '—'}</td>
-                  <td style={td}>
-                    {new Date(app.submitted_at).toLocaleDateString('en-ZA')}
-                  </td>
+          <div className="table-scroll">
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+              <thead>
+                <tr style={{ backgroundColor: '#e60000', color: 'white' }}>
+                  <th style={th}>ID</th>
+                  <th style={th}>Name</th>
+                  <th style={th}>Surname</th>
+                  <th style={th}>Email</th>
+                  <th style={th}>Tel</th>
+                  <th style={th}>Company</th>
+                  <th style={th}>Submitted</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {applications.map((app, index) => (
+                  <tr
+                    key={app.id}
+                    style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f9f9f9' }}>
+                    <td style={td}>{app.id}</td>
+                    <td style={td}>{app.title} {app.first_name}</td>
+                    <td style={td}>{app.surname}</td>
+                    <td style={td}>{app.email || '—'}</td>
+                    <td style={td}>{app.home_tel || '—'}</td>
+                    <td style={td}>{app.company_name || '—'}</td>
+                    <td style={td}>
+                      {new Date(app.submitted_at).toLocaleDateString('en-ZA')}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
 
       </div>
