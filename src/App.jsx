@@ -49,8 +49,8 @@ function App() {
   const [view, setView] = useState('form');
 
   if (view === 'dashboard') {
-  return <Dashboard onBack={() => setView('form')} />;
-}
+    return <Dashboard onBack={() => setView('form')} />;
+  }
 
   // One function handles ALL field changes
   const handleChange = (e) => {
