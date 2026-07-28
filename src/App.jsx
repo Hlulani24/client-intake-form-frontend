@@ -80,20 +80,7 @@ function App() {
   return (
     <div className="form-wrapper">
 
-      <div className="form-header">
-        <div className="header-left">
-          <div className="header-address">
-            Vodacom Corporate Park, 082 Vodacom Boulevard<br />
-            Midrand, 1685 South Africa<br />
-            Private Bag X9904, Sandton 2146<br />
-            Tel: 082 111 | Fax: 086 0082 082<br />
-            <a href="https://www.vodacom.co.za" target="_blank" rel="noreferrer">
-              www.vodacom.co.za
-            </a><br />
-            Vodacom (Pty) Ltd<br />
-            Reg No: 1993/003367/07 | VAT Reg No: 4010139121
-          </div>
-        </div>
+      
 
         <div className="header-right">
           <h2>Individual Application Form</h2>
