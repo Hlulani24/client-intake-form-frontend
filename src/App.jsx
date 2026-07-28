@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="form-wrapper">
 
-      
+      <div className="form-header">
 
         <div className="header-right">
           <h2>Individual Application Form</h2>
@@ -102,20 +102,20 @@ function App() {
           </div>
 
           <button
-  onClick={() => setView('dashboard')}
-  style={{
-    marginTop: '10px',
-    backgroundColor: '#e60000',
-    color: 'white',
-    border: 'none',
-    padding: '8px 20px',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontWeight: '600',
-    fontSize: '13px'
-  }}>
-  View Dashboard →
-</button>
+            onClick={() => setView('dashboard')}
+            style={{
+              marginTop: '10px',
+              backgroundColor: '#e60000',
+              color: 'white',
+              border: 'none',
+              padding: '8px 20px',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: '600',
+              fontSize: '13px'
+            }}>
+            View Dashboard →
+          </button>
 
         </div>
       </div>
