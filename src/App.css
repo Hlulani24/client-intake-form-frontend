@@ -1,5 +1,5 @@
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
   max-width: 100%;
 }
 
@@ -16,6 +16,7 @@ body {
 }
 
 .form-wrapper {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -330,6 +331,7 @@ body {
 }
 
 .table-scroll {
+  width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
