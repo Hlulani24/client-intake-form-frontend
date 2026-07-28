@@ -6,7 +6,7 @@ function Dashboard({ onBack }) {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('https://vodacom-backend.onrender.com')
+    fetch('https://vodacom-backend.onrender.com/applications')
       .then(res => res.json())
       .then(data => {
         if (data.success) {
